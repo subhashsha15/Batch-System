@@ -1,0 +1,130 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0rem;
+    padding: 20px 0px;
+    width: 100%;
+    margin-left: -100px;
+}
+
+.navbar-logo img {
+    width: 100px;
+}
+
+.navbar-lists {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: all 0.3s ease-in-out;
+    margin-left: -400px;
+}
+
+.navbar-lists li {
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-lists .active {
+    color: #FF5555;
+    font-weight: 600;
+}
+
+.nav-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-download-button {
+    display: block;
+}
+
+/* Responsive-media */
+@media screen and (max-width: 766px) {
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0px;
+        padding: 20px 10px;
+    }
+
+    .navbar-lists {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        right: 0px;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        margin-left: 0px;
+    }
+
+    .navbar-lists.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-icon {
+        display: block;
+        float: right;
+    }
+
+    .navbar-download-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0px;
+        padding: 20px 10px;
+    }
+
+    .navbar-lists {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        right: 0px;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        margin-left: 0px;
+    }
+
+    .navbar-lists.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-icon {
+        display: block;
+        float: right;
+    }
+
+    .navbar-download-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .navbar-container {
+        margin-left: 0px;
+        padding: 20px 10px;
+    }
+
+    .navbar-lists {
+        margin-left: 0px;
+    }
+}
